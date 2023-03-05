@@ -1,56 +1,188 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import traits from "~~/data/traits";
+import skills from "~~/data/skills";
+</script>
 
 <template>
   <main>
-    <div
-      id="top"
-      class="hero min-h-screen"
-      style="background-image: url(/images/doors.jpg)"
-    >
-      <div class="hero-overlay bg-opacity-80"></div>
-      <div class="hero-content text-center text-neutral-content">
-        <div class="max-w-lg space-y-6">
-          <h1 class="mb-5 text-7xl font-bold">Moje Wybory</h1>
-          <p class="mb-5">
-            Cześć, zapraszam Cię do zobaczenia mojego obecnego postrzegania
-            swojej własnej przyszłości. Mam nadzieję, że Ci się spodoba.
-          </p>
-          <a
-            class="btn btn-accent btn-md rounded-md px-5 gap-1"
-            href="#what-why"
-          >
-            Rozpocznij podróż
-            <Icon name="bx:right-arrow-alt" size="15" />
-          </a>
-        </div>
-      </div>
-    </div>
-    <div id="what-why" class="min-h-screen max-h-screen min-w-screen px-5 grid">
-      <QuestionCard
-        img-src="/images/what.png"
-        title="Co jest moim obecnym wyborem?"
-        img-bg-color="bg-accent"
-        class="h-[80vh]"
-      >
-        <p class="mt-2 text-lg">Programista.</p>
-      </QuestionCard>
-    </div>
-    <div
-      id="what-why"
-      class="min-h-screen max-h-screen min-w-screen px-5 grid py-20"
-    >
-      <QuestionCard
-        img-src="/images/why.png"
-        title="Jaka jest motywacja mojego wyboru?"
-        img-bg-color="bg-secondary"
-        class="h-screen"
-      >
-        <p class="mt-2 text-lg">
-          Od kiedy zacząłem moją przygodę z programowaniem parę lat temu
-          uwielbiałem kodować. Oczywiście, są także inne czynniki decyzji, ale
-          myślę, że to jest ten najważniejszy z nich.
+    <Hero img-src="/images/doors.jpg" :opacity="70">
+      <div class="max-w-lg space-y-6">
+        <h1 class="mb-5 text-7xl font-bold">Mój Wybór</h1>
+        <p class="mb-5">
+          Cześć, zapraszam Cię do zobaczenia mojego obecnego postrzegania swojej
+          własnej przyszłości. Mam nadzieję, że Ci się spodoba.
         </p>
-      </QuestionCard>
-    </div>
+        <a class="btn btn-accent btn-md rounded-md px-5 gap-1" href="#what-why">
+          Rozpocznij podróż
+          <Icon name="bx:right-arrow-alt" size="15" />
+        </a>
+      </div>
+    </Hero>
+    <Hero img-src="/images/question-mark.jpg" :opacity="80" id="what-why">
+      <div class="grid space-y-10">
+        <div
+          class="max-w-2xl space-y-6 border shadow-lg px-3 py-2 bg-gray-700 bg-opacity-30"
+        >
+          <h1 class="mb-5 text-8xl font-bold">Co?</h1>
+          <p class="mb-5 text-xl">
+            W chwili obecnej wiążę swoją przyszłość z branżą IT. Dokładniej,
+            choć wciąż nie do końca dokładnie, mówiąc, z programowaniem.
+          </p>
+        </div>
+
+        <div
+          class="max-w-2xl space-y-6 border shadow-lg bg-gray-700 bg-opacity-30 px-3 py-2"
+        >
+          <h1 class="mb-5 text-8xl font-bold">Dlaczego?</h1>
+          <p class="mb-5 text-xl">
+            Swoją przygodę z programowaniem zacząłem w 6 klasie podstawówki. Od
+            początku koncept programowania wydał mi się bardzo ciekawy i byłem
+            nim zafascynowany. Na początku traktowałem to jako hobby, ale z
+            czasem zacząłem myśleć o programowaniu w kontekście pracy. Nie byłem
+            jednak pewien, czy to jest ta profesja którą powinienem wybrać.
+            Wciąż do końca nie jestem i wątpię czy kiedykolwiek będę. Jest to
+            jednak zdecydowanie ten kierunek, o którym myślę obecnie
+            najpoważniej. <br />Bo, po prostu, lubię programować!
+          </p>
+        </div>
+        <a
+          class="btn btn-primary btn-md rounded-md px-5 gap-1"
+          href="#about-programming"
+        >
+          O zawodzie programisty
+          <Icon name="bx:down-arrow-alt" size="15" />
+        </a>
+      </div>
+    </Hero>
+    <Hero id="about-programming" img-src="/images/chalkboard.jpg">
+      <div>
+        <div class="grid space-y-10 border p-7">
+          <h1 class="text-5xl xl:text-6xl font-medium">Co robi programista?</h1>
+          <div class="text-lg xl:text-xl text-left">
+            Oczywistą odpowiedzią jest:
+            <span class="font-bold">pisze kod</span>. Jest to pisanie programu w
+            odpowiednim języku programowania w celu wykonania określonej
+            czynności.
+            <br />
+            Ale to nie wszystko. Do innych czynności programisty należą:
+            <ul class="list-disc grid space-y-1 mt-1 ml-3">
+              <li>
+                <span class="font-bold">Planowanie projektów</span> - dużą część
+                czasu programiście zajmuje zaplanowanie projektu przed
+                napisaniem kodu do niego. W tym czasie programista musi określić
+                jakie funkcje ma posiadać dany program, jakie technologie
+                wykorzystać, jakie narzędzia, itd. Jest to jedna z kluczowych
+                czynności programisty.
+              </li>
+              <li>
+                <span class="font-bold">Testowanie</span> - każdy napisany
+                kod/część kodu należy przetestować - tj. sprawdzić czy działa
+                poprawnie. Istnieje wiele metod testowania, ale najczęściej
+                używane są testy jednostkowe, testy integracyjne, testy
+                systemowe, testy akceptacyjne. Źle przetestowany kod może
+                prowadzić do m. in. problemów z bezpieczeństwem, błędów w
+                działaniu programu, itd.
+              </li>
+              <li>
+                <span class="font-bold">Wdrażanie</span> - jest to proces, w
+                którym programista musi wdrożyć napisany przez niego program na
+                inny komputer (np. serwer) - tam, gdzie będzie on używany. W tym
+                czasie programista musi zainstalować wszystkie potrzebne
+                narzędzia, biblioteki, itd. oraz skonfigurować je tak, aby
+                program działał poprawnie.
+              </li>
+            </ul>
+            Oczywiście istnieje więcej czynności należących do pracy programisty
+            - to są jednak te kluczowe z nich.
+            <br />
+            <p class="mt-3">
+              Efektem tych czynności są w założeniu sprawne programy
+              komputerowe. Przykładami są m. in. aplikacje internetowe,
+              aplikacje desktopowe, aplikacje mobilne, systemy zarządzania itd.
+            </p>
+          </div>
+          <hr />
+          <h1 class="mt-2 font-medium text-5xl">
+            W jakich warunkach i z kim pracuje programista?
+          </h1>
+          <p class="text-lg xl:text-xl text-left">
+            Praktycznie jedynym warunkiem jest praca przy komputerze.
+            Programista może pracować w przeróżnych miejscach - w biurze, w
+            domu, w kawiarni, w parku, w samochodzie, itd.
+            <br />Programista może pracować samodzielnie lub w zespole. W
+            zespole programista może pracować z innymi programistami,
+            projektantami, testerami, itd. Natomiast samemu programista może
+            pracować np. w formie tzw. freelancingu - czyli pracować dla wielu
+            klientów na zlecenie.
+          </p>
+        </div>
+        <a
+          class="btn btn-info btn-md rounded-md px-10 gap-1 mt-4"
+          href="#traits-and-skills"
+        >
+          Jakie cechy i umiejętności powinien więc posiadać dobry programista?
+          <Icon name="bx:down-arrow-alt" size="15" />
+        </a>
+      </div>
+    </Hero>
+    <Hero id="traits-and-skills" img-src="/images/chalkboard2.jpg">
+      <div>
+        <h1 class="text-6xl font-medium mb-10">
+          Jakie cechy i umiejętności powinien więc posiadać dobry programista?
+        </h1>
+        <div class="flex border p-10">
+          <div class="w-1/2 px-3 grid space-y-5">
+            <div class="rounded-sm p-5 flex bg-base-300 border items-center">
+              <Icon name="game-icons:skills" size="30" />
+              <h1 class="ml-3 text-3xl">Umiejętności</h1>
+            </div>
+            <div
+              class="rounded-lg border p-5 flex bg-base-100 items-center"
+              v-for="skill in skills"
+            >
+              <Icon :name="skill.icon" :size="`${skill.iconSize}`" />
+              <div class="ml-5">
+                <p class="text-lg text-left">
+                  {{ skill.name }} - {{ skill.description }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="divider divider-horizontal"></div>
+          <div class="w-1/2 grid space-y-5 px-3">
+            <div class="rounded-sm p-5 flex bg-base-300 border">
+              <Icon name="game-icons:character" size="30" />
+              <h1 class="ml-3 text-3xl">Cechy charakteru</h1>
+            </div>
+            <div
+              class="rounded-lg border p-5 flex bg-base-100 items-center"
+              v-for="trait in traits"
+            >
+              <Icon :name="trait.icon" :size="`${trait.iconSize}`" />
+              <div class="ml-5">
+                <p class="text-lg text-left">
+                  {{ trait.name }} - {{ trait.description }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a
+          class="btn btn-primary btn-md rounded-md px-5 gap-1 mt-2"
+          href="#useful-interests"
+        >
+          Przydatne zainteresowania
+          <Icon name="bx:down-arrow-alt" size="15" />
+        </a>
+      </div>
+    </Hero>
+    <Hero id="useful-interests">
+      <div>
+        <h1 class="text-3xl">
+          Znając już przydatne umiejętności, oto parę przydatnych zainteresowań,
+          które pomogą te umiejętności rozwinąć.
+        </h1>
+      </div>
+    </Hero>
   </main>
 </template>
