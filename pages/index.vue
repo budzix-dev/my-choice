@@ -238,7 +238,7 @@ const sections = [
         </a>
       </div>
     </Hero>
-    <Hero id="how-to-get-there" img-src="images/graybg.jpg">
+    <Hero id="how-to-get-there" img-src="/images/graybg.jpg">
       <div>
         <div class="grid space-y-5 bg-base-100/40 rounded-md p-7">
           <h1 class="text-4xl">Jaką ścieżkę obrać by zostać programistą?</h1>
@@ -330,7 +330,7 @@ const sections = [
             </p>
           </div>
           <div class="mt-7">
-            <img src="images/swot.jpeg" alt="swot" class="w-full rounded-md" />
+            <img src="/images/swot.jpeg" alt="swot" class="w-full rounded-md" />
           </div>
         </div>
         <a
