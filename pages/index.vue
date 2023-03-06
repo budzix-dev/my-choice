@@ -5,23 +5,25 @@ import interests from "~~/utils/interests";
 
 const route = useRoute();
 
-onscroll = () => {
-  if (process.client) {
-    const scrollBtn = document.getElementById("scroll-btn");
-    if (window.scrollY > 100) {
-      scrollBtn!.classList.remove("hidden");
-    } else {
-      scrollBtn!.classList.add("hidden");
-    }
+if (process.browser) {
+  window.onscroll = () => {
+    if (process.client) {
+      const scrollBtn = document.getElementById("scroll-btn");
+      if (window.scrollY > 100) {
+        scrollBtn!.classList.remove("hidden");
+      } else {
+        scrollBtn!.classList.add("hidden");
+      }
 
-    const prevBtn = document.getElementById("prev-btn");
-    if (route.hash !== "") {
-      prevBtn!.classList.remove("hidden");
-    } else {
-      prevBtn!.classList.add("hidden");
+      const prevBtn = document.getElementById("prev-btn");
+      if (route.hash !== "") {
+        prevBtn!.classList.remove("hidden");
+      } else {
+        prevBtn!.classList.add("hidden");
+      }
     }
-  }
-};
+  };
+}
 
 const sections = [
   "#",
