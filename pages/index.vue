@@ -5,7 +5,7 @@ import interests from "~~/utils/interests";
 
 const route = useRoute();
 
-if (process.browser) {
+if (typeof window !== "undefined") {
   window.onscroll = () => {
     if (process.client) {
       const scrollBtn = document.getElementById("scroll-btn");
