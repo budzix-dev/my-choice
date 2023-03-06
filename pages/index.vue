@@ -376,12 +376,6 @@ const sections = [
       <a href="#" class="btn btn-secondary btn-circle lg:btn-lg xl:btn-xl">
         <Icon name="bx:up-arrow-alt" size="25" />
       </a>
-    </div>
-
-    <div
-      class="sticky w-full flex justify-start bottom-0 pb-3 lg:pb-10 pl-5 lg:pl-16 transition hidden"
-      id="prev-btn"
-    >
       <a
         :href="sections[sections.indexOf(route.hash) - 1]"
         class="btn btn-secondary btn-circle lg:btn-lg xl:btn-xl gap-1"
