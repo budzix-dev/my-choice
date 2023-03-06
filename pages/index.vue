@@ -5,7 +5,10 @@ import interests from "~~/utils/interests";
 
 const route = useRoute();
 
+const currentHref = ref("");
+
 const toggleScrollBtn = () => {
+  currentHref.value = route.hash;
   const scrollBtn = document.getElementById("prev-btn");
   if (window.scrollY > 100) {
     scrollBtn!.classList.remove("hidden");
@@ -364,7 +367,7 @@ const sections = [
       </div>
     </Hero>
     <div
-      class="sticky w-full flex justify-end bottom-0 pb-3 lg:pb-10 pr-5 lg:pr-16 transition space-x-3"
+      class="sticky flex justify-end bottom-0 pb-3 lg:pb-10 pr-5 lg:pr-16 transition space-x-3"
       id="scroll-btn"
     >
       <a
@@ -375,7 +378,7 @@ const sections = [
         <Icon name="bx:up-arrow-alt" size="25" />
       </a>
       <a
-        :href="sections[sections.indexOf(route.hash) - 1]"
+        :href="sections[sections.indexOf(currentHref) - 1]"
         class="btn btn-secondary btn-circle lg:btn-lg xl:btn-xl hidden"
         id="prev-btn"
       >
