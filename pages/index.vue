@@ -370,15 +370,20 @@ const sections = [
       </div>
     </Hero>
     <div
-      class="sticky w-full flex justify-end bottom-0 pb-3 lg:pb-10 pr-5 lg:pr-16 transition hidden"
+      class="sticky w-full flex justify-end bottom-0 pb-3 lg:pb-10 pr-5 lg:pr-16 transition space-x-3"
       id="scroll-btn"
     >
-      <a href="#" class="btn btn-secondary btn-circle lg:btn-lg xl:btn-xl">
+      <a
+        href="#"
+        class="btn btn-secondary btn-circle lg:btn-lg xl:btn-xl hidden"
+        id="scroll-btn"
+      >
         <Icon name="bx:up-arrow-alt" size="25" />
       </a>
       <a
         :href="sections[sections.indexOf(route.hash) - 1]"
-        class="btn btn-secondary btn-circle lg:btn-lg xl:btn-xl gap-1"
+        class="btn btn-secondary btn-circle lg:btn-lg xl:btn-xl hidden"
+        id="prev-btn"
       >
         <Icon name="bx:left-arrow-alt" size="25" />
       </a>
