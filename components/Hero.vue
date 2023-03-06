@@ -13,7 +13,7 @@ defineProps<Props>();
     class="hero min-h-screen"
     :style="imgSrc ? `background-image: url(${imgSrc})` : ``"
   >
-    <div :class="`hero-overlay bg-opacity-${opacity || 100}`"></div>
+    <div :class="`hero-overlay bg-opacity-${opacity || 0}`"></div>
     <div class="hero-content text-center">
       <slot />
     </div>

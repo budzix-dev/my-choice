@@ -2,36 +2,6 @@
 import traits from "~~/utils/traits";
 import skills from "~~/utils/skills";
 import interests from "~~/utils/interests";
-
-const route = useRoute();
-
-const currentHref = ref("");
-
-const toggleScrollBtn = () => {
-  currentHref.value = route.hash;
-  const scrollBtn = document.getElementById("prev-btn");
-  if (window.scrollY > 100) {
-    scrollBtn!.classList.remove("hidden");
-  } else {
-    scrollBtn!.classList.add("hidden");
-  }
-};
-
-onMounted(() => {
-  toggleScrollBtn();
-  window.onscroll = toggleScrollBtn;
-});
-
-const sections = [
-  "#",
-  "#what-why",
-  "#about-programming",
-  "#traits-and-skills",
-  "#useful-interests",
-  "#how-to-get-there",
-  "#swot-analysis",
-  "#for-and-against",
-];
 </script>
 
 <template>
@@ -43,7 +13,10 @@ const sections = [
           Cześć, zapraszam Cię do zobaczenia mojego obecnego postrzegania swojej
           własnej przyszłości. Mam nadzieję, że Ci się spodoba.
         </p>
-        <a class="btn btn-accent btn-md rounded-md px-5 gap-1" href="#what-why">
+        <a
+          class="btn btn-accent btn-md rounded-md px-5 gap-1 z-10"
+          href="#what-why"
+        >
           Rozpocznij podróż
           <Icon name="bx:right-arrow-alt" size="15" />
         </a>
@@ -77,7 +50,7 @@ const sections = [
           </p>
         </div>
         <a
-          class="btn btn-primary btn-md rounded-md px-5 gap-1"
+          class="btn btn-primary btn-md rounded-md px-5 gap-1 z-10"
           href="#about-programming"
         >
           O zawodzie programisty
@@ -148,7 +121,7 @@ const sections = [
           </p>
         </div>
         <a
-          class="btn btn-info btn-md rounded-md px-10 gap-1 mt-4"
+          class="btn btn-info btn-md rounded-md px-10 gap-1 mt-4 z-10"
           href="#traits-and-skills"
         >
           Jakie cechy i umiejętności powinien więc posiadać dobry programista?
@@ -199,7 +172,7 @@ const sections = [
           </div>
         </div>
         <a
-          class="btn btn-primary btn-md rounded-md px-5 gap-1 mt-2"
+          class="btn btn-primary btn-md rounded-md px-5 gap-1 mt-2 z-10"
           href="#useful-interests"
         >
           Przydatne zainteresowania
@@ -230,7 +203,7 @@ const sections = [
           </div>
         </div>
         <a
-          class="btn btn-secondary text-white btn-md rounded-md px-5 gap-1 mt-2"
+          class="btn btn-secondary text-white btn-md rounded-md px-5 gap-1 mt-2 z-10"
           href="#how-to-get-there"
           >Jak zostać programistą?
           <Icon name="bx:down-arrow-alt" size="15" />
@@ -312,7 +285,7 @@ const sections = [
           </p>
         </div>
         <a
-          class="btn btn-primary text-white w-full rounded-md px-5 gap-1 mt-2"
+          class="btn btn-primary text-white w-full rounded-md px-5 gap-1 mt-2 z-10"
           href="#swot-analysis"
           >Analiza SWOT<Icon name="bx:down-arrow-alt" size="15"
         /></a>
@@ -320,7 +293,7 @@ const sections = [
     </Hero>
     <Hero id="swot-analysis" img-src="/images/bg2.jpg">
       <div>
-        <div class="border lg:p-20 p-5 rounded-t-xl bg-base-100/80 max-w-7xl">
+        <div class="border lg:p-20 p-5 rounded-t-xl bg-base-100/80 max-w-5xl">
           <div class="text-left text-white">
             <h4 class="text-4xl mb-5 text-left">Analiza SWOT</h4>
             <p class="text-2xl text-left">
@@ -333,7 +306,7 @@ const sections = [
           </div>
         </div>
         <a
-          class="btn text-white w-full rounded-b-md px-5 gap-1 bg-base-300/90"
+          class="btn text-white w-full rounded-b-md px-5 gap-1 bg-base-300/90 z-10"
           href="#for-and-against"
           >Wskazania i przeciwwskazania<Icon name="bx:down-arrow-alt" size="15"
         /></a>
@@ -366,24 +339,5 @@ const sections = [
         </div>
       </div>
     </Hero>
-    <div
-      class="sticky flex justify-end bottom-0 pb-3 lg:pb-10 pr-5 lg:pr-16 transition space-x-3"
-      id="scroll-btn"
-    >
-      <a
-        href="#"
-        class="btn btn-secondary btn-circle lg:btn-lg xl:btn-xl hidden"
-        id="scroll-btn"
-      >
-        <Icon name="bx:up-arrow-alt" size="25" />
-      </a>
-      <a
-        :href="sections[sections.indexOf(currentHref) - 1]"
-        class="btn btn-secondary btn-circle lg:btn-lg xl:btn-xl hidden"
-        id="prev-btn"
-      >
-        <Icon name="bx:left-arrow-alt" size="25" />
-      </a>
-    </div>
   </main>
 </template>
