@@ -5,22 +5,18 @@ import interests from "~~/utils/interests";
 
 const route = useRoute();
 
-onMounted(() => {
-  window.onscroll = () => {
-    const scrollBtn = document.getElementById("scroll-btn");
-    if (window.scrollY > 100) {
-      scrollBtn!.classList.remove("hidden");
-    } else {
-      scrollBtn!.classList.add("hidden");
-    }
+const toggleScrollBtn = () => {
+  const scrollBtn = document.getElementById("prev-btn");
+  if (window.scrollY > 100) {
+    scrollBtn!.classList.remove("hidden");
+  } else {
+    scrollBtn!.classList.add("hidden");
+  }
+};
 
-    const prevBtn = document.getElementById("prev-btn");
-    if (route.hash !== "") {
-      prevBtn!.classList.remove("hidden");
-    } else {
-      prevBtn!.classList.add("hidden");
-    }
-  };
+onMounted(() => {
+  toggleScrollBtn();
+  window.onscroll = toggleScrollBtn;
 });
 
 const sections = [
