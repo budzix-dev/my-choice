@@ -27,7 +27,7 @@ import interests from "~~/utils/interests";
         <div
           class="max-w-2xl space-y-6 border shadow-lg px-3 py-2 bg-gray-700 bg-opacity-30"
         >
-          <h1 class="mb-5 text-8xl font-bold">Co?</h1>
+          <h1 class="mb-5 text-6xl font-bold">Co?</h1>
           <p class="mb-5 text-xl">
             W chwili obecnej wiążę swoją przyszłość z branżą IT. Dokładniej,
             choć wciąż nie do końca dokładnie, mówiąc, z programowaniem.
@@ -37,7 +37,7 @@ import interests from "~~/utils/interests";
         <div
           class="max-w-2xl space-y-6 border shadow-lg bg-gray-700 bg-opacity-30 px-3 py-2"
         >
-          <h1 class="mb-5 text-8xl font-bold">Dlaczego?</h1>
+          <h1 class="mb-5 text-6xl font-bold">Dlaczego?</h1>
           <p class="mb-5 text-xl">
             Swoją przygodę z programowaniem zacząłem w 6 klasie podstawówki. Od
             początku koncept programowania wydał mi się bardzo ciekawy i byłem
@@ -106,7 +106,7 @@ import interests from "~~/utils/interests";
             </p>
           </div>
           <hr />
-          <h1 class="mt-2 font-medium text-3xl xl:text-4xl">
+          <h1 class="mt-2 font-medium text-2xl">
             W jakich warunkach i z kim pracuje programista?
           </h1>
           <p class="text-md text-left">
@@ -131,7 +131,7 @@ import interests from "~~/utils/interests";
     </Hero>
     <Hero id="traits-and-skills" img-src="/images/chalkboard2.jpg">
       <div>
-        <h1 class="text-6xl font-medium mb-10">
+        <h1 class="text-4xl font-medium mb-10">
           Jakie cechy i umiejętności powinien więc posiadać dobry programista?
         </h1>
         <div class="flex border p-10">
@@ -212,7 +212,9 @@ import interests from "~~/utils/interests";
     </Hero>
     <Hero id="how-to-get-there" img-src="/images/graybg.jpg">
       <div>
-        <div class="grid space-y-5 bg-base-100/40 rounded-md p-7">
+        <div
+          class="grid space-y-2 bg-base-100/40 rounded-md p-7 max-h-[80vh] overflow-y-auto"
+        >
           <h1 class="text-4xl">Jaką ścieżkę obrać by zostać programistą?</h1>
           <p class="text-lg">
             Jest wiele takich ścieżek, by pracować jako programista
@@ -293,16 +295,18 @@ import interests from "~~/utils/interests";
     </Hero>
     <Hero id="swot-analysis" img-src="/images/bg2.jpg">
       <div>
-        <div class="border p-5 rounded-t-xl bg-base-100/80 max-w-3xl">
+        <div
+          class="border p-5 rounded-t-xl bg-base-100/80 max-w-3xl max-h-[80vh]"
+        >
           <div class="text-left text-white">
-            <h4 class="text-4xl mb-5 text-left">Analiza SWOT</h4>
-            <p class="text-2xl text-left">
+            <h4 class="text-2xl mb-3 text-left">Analiza SWOT</h4>
+            <p class="text-xl text-left">
               Jest to analiza, która może pomóc w dokonaniu wyboru. Tu jest moja
               osobista analiza:
             </p>
           </div>
-          <div class="mt-7">
-            <img src="/images/swot.jpeg" alt="swot" class="w-full rounded-md" />
+          <div class="mt-4 flex justify-center">
+            <img src="/images/swot.jpeg" alt="swot" class="w-2/3" />
           </div>
         </div>
         <a
