@@ -61,8 +61,8 @@ import interests from "~~/utils/interests";
     <Hero id="about-programming" img-src="/images/chalkboard.jpg">
       <div>
         <div class="grid space-y-5 border p-7">
-          <h1 class="text-3xl xl:text-4xl font-medium">Co robi programista?</h1>
-          <div class="text-md xl:text-lg text-left">
+          <h1 class="text-3xl font-medium">Co robi programista?</h1>
+          <div class="text-md text-left">
             Oczywistą odpowiedzią jest:
             <span class="font-bold">pisze kod</span>. Jest to pisanie programu w
             odpowiednim języku programowania w celu wykonania określonej
@@ -109,7 +109,7 @@ import interests from "~~/utils/interests";
           <h1 class="mt-2 font-medium text-3xl xl:text-4xl">
             W jakich warunkach i z kim pracuje programista?
           </h1>
-          <p class="text-md xl:text-lg text-left">
+          <p class="text-md text-left">
             Praktycznie jedynym warunkiem jest praca przy komputerze.
             Programista może pracować w przeróżnych miejscach - w biurze, w
             domu, w kawiarni, w parku, w samochodzie, itd.
@@ -121,7 +121,7 @@ import interests from "~~/utils/interests";
           </p>
         </div>
         <a
-          class="btn btn-info btn-md rounded-md px-10 gap-1 mt-4 z-10"
+          class="btn btn-info btn-md rounded-md px-10 gap-1 mt-2 z-10"
           href="#traits-and-skills"
         >
           Jakie cechy i umiejętności powinien więc posiadać dobry programista?
@@ -293,7 +293,7 @@ import interests from "~~/utils/interests";
     </Hero>
     <Hero id="swot-analysis" img-src="/images/bg2.jpg">
       <div>
-        <div class="border xl:p-20 p-5 rounded-t-xl bg-base-100/80 max-w-3xl">
+        <div class="border p-5 rounded-t-xl bg-base-100/80 max-w-3xl">
           <div class="text-left text-white">
             <h4 class="text-4xl mb-5 text-left">Analiza SWOT</h4>
             <p class="text-2xl text-left">
